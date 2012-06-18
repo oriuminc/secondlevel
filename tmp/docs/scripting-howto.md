@@ -21,7 +21,8 @@ and run:
 
 This will start you down the road to using Rerun.
 
-We keep our custom rerum modules in `tmp/scripts/rerun-modules`. You
+We keep our custom rerum modules in
+[`tmp/scripts/rerun-modules`][rerun-layout]. You
 can most easily explore them via the CLI by navigating to `tmp/scripts`
 and running
 
@@ -36,3 +37,4 @@ shell session.
 
 <!-- Links -->
    [rerun-readme]: https://github.com/dtolabs/rerun#readme
+   [rerun-layout]: https://github.com/dtolabs/rerun/blob/master/README.md#layout

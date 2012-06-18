@@ -16,12 +16,16 @@ Drupal.org distros][drush-make-distros], with some additional features.
 Notes
 -----
 
-  - 
+  - The scripts are in the process of being converted to using the rerun
+    framework. Further docs are available in `tmp/docs/scripting-howto.md`.
 
 To Do
 -----
 
-  -
+  - Convert scripts to make use of rerun framework for enhanced
+    modularization.
+  - Sanitize and include deploy script.
+  - Sanitize and include Acquia drush alias.
 
 <!-- Links -->
    [inception-about]:    http://github.com/myplanetdigital/inception
