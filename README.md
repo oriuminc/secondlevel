@@ -1,9 +1,9 @@
-2nd Level
-=========
+2nd Level Deep
+==============
 
-2nd Level is a high-performance base install profile intended to be run
-using the [Inception continuous integration stack][inception-about]. It
-is intended to be used to build sites that will run on environments
+2nd Level Deep is a high-performance base install profile intended to be
+run using the [Inception continuous integration stack][inception-about].
+It is intended to be used to build sites that will run on environments
 with:
 
   - Varnish
@@ -21,7 +21,7 @@ Notes
   - It is assumed that this install profile will be used as a base for a
     separate project install profile that use it as a dependency.
 Profile inheritance is made possible by the patches in [this d.o
-issue][drupal-profile-inheritance].)
+issue][profile-inheritance].)
 
 To Do
 -----
