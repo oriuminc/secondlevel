@@ -18,6 +18,10 @@ Notes
 
   - The scripts are in the process of being converted to using the rerun
     framework. Further docs are available in `tmp/docs/scripting-howto.md`.
+  - It is assumed that this install profile will be used as a base for a
+    separate project install profile that use it as a dependency.
+Profile inheritance is made possible by the patches in [this d.o
+issue][drupal-profile-inheritance].)
 
 To Do
 -----
@@ -28,5 +32,6 @@ To Do
   - Sanitize and include Acquia drush alias.
 
 <!-- Links -->
-   [inception-about]:    http://github.com/myplanetdigital/inception
-   [drush-make-distros]: http://drupal.org/node/1476014
+   [inception-about]:     http://github.com/myplanetdigital/inception
+   [drush-make-distros]:  http://drupal.org/node/1476014
+   [profile-inheritance]: http://drupal.org/node/1356276
