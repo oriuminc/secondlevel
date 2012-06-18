@@ -1,0 +1,9 @@
+# System
+.DS_Store
+*.tgz
+*.tar.gz
+*.zip
+
+# Project
+*/contrib/
+libraries/

@@ -1,0 +1,11 @@
+name = 2nd Level
+description = High-performance base install profile for Inception CI stack.
+version = 1.x-dev
+core = 7.x
+dependencies[] = block
+dependencies[] = dblog
+
+; 2NDLEVEL
+dependencies[] = apc
+dependencies[] = memcache
+dependencies[] = varnish
