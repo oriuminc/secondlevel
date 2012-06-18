@@ -11,3 +11,7 @@ git config --global color.ui auto
 
 mkdir -p ~/.ssh
 echo -e "Host *\n  StrictHostKeyChecking no" > ~/.ssh/config
+
+# Add rerun directory to PATH
+export PATH="$PATH:$WORKSPACE/profile/tmp/scripts/rerun"
+export RERUN_MODULES="$WORKSPACE/profile/tmp/scripts/rerun-modules"

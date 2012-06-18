@@ -1,0 +1,3 @@
+[submodule "tmp/scripts/rerun"]
+	path = tmp/scripts/rerun
+	url = https://github.com/dtolabs/rerun.git
