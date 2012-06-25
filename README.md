@@ -28,6 +28,8 @@ To Do
 
   - Convert scripts to make use of rerun framework for enhanced
     modularization.
+  - Test rerun build script.
+  - Allow relative paths in rerun build script.
   - Sanitize and include deploy script.
   - Sanitize and include Acquia drush alias.
 
