@@ -13,13 +13,29 @@ with:
 This module makes use of a layout derived from that used for [packaging
 Drupal.org distros][drush-make-distros], with some additional features.
 
+To Build
+--------
+
+*See `tmp/docs/scripting-howto.md` for explanation of how we're using the
+Rerun framework for bash scripting.*
+
+To build the site, we'll need to run a few commands to prepare the shell
+session. We're not setting anything permanent, and these will only be in
+effect for the current shell session:
+
+    $ export RERUN_MODULES=`readlink -f tmp/scripts/rerun-modules`
+    $ export PATH=$PATH:`readlink -f tmp/scripts/rerun`
+
+And now that we're prepared the shell session, we can use rerun to
+build the site:
+
+    $ rerun 2ndlevel:build -f build-2ndlevel.make -d /path/to/build/docroot
+
 Notes
 -----
 
-  - The scripts are in the process of being converted to using the rerun
-    framework. Further docs are available in `tmp/docs/scripting-howto.md`.
   - It is assumed that this install profile will be used as a base for a
-    separate project install profile that use it as a dependency.
+    separate project install profile that uses it as a dependency.
 Profile inheritance is made possible by the patches in [this d.o
 issue][profile-inheritance].)
 

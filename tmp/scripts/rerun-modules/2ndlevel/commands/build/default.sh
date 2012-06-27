@@ -9,8 +9,6 @@
 #   Build the site from install profile.
 #
 
-set -e
-
 # Parse the command options
 [ -r $RERUN_MODULES/2ndlevel/commands/build/options.sh ] && {
   source $RERUN_MODULES/2ndlevel/commands/build/options.sh
@@ -25,7 +23,10 @@ set -e
 # Your implementation goes here.
 # ------------------------------
 
+set -e
+
 # Drush make the site structure
+echo "Running Drush Make..."
 drush make ${BUILD_FILE} ${BUILD_DEST} \
   --working-copy \
   --prepare-install \
