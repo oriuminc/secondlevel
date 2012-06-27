@@ -26,9 +26,10 @@ effect for the current shell session:
     $ export RERUN_MODULES=`readlink -f tmp/scripts/rerun-modules`
     $ export PATH=$PATH:`readlink -f tmp/scripts/rerun`
 
-And now that we're prepared the shell session, we can use rerun to
-build the site:
+And now that we're prepared the shell session, we can use rerun (which
+we keep as a git submodule) to build the site:
 
+    $ git submodule init && git submodule update
     $ rerun 2ndlevel:build -f build-2ndlevel.make -d /path/to/build/docroot
 
 Notes
