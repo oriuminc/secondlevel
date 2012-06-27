@@ -39,6 +39,9 @@ Notes
     separate project install profile that uses it as a dependency.
 Profile inheritance is made possible by the patches in [this d.o
 issue][profile-inheritance].)
+  - Drush Make fails when it comes to a symlink, so can't symlink
+    "stubbs" rerun module into rerun git submodule. Posted to a related
+[issue in Drush queue][drush-symlink-issue].
 
 To Do
 -----
@@ -51,6 +54,7 @@ To Do
   - Sanitize and include Acquia drush alias.
 
 <!-- Links -->
-   [inception-about]:     http://github.com/myplanetdigital/inception
-   [drush-make-distros]:  http://drupal.org/node/1476014
-   [profile-inheritance]: http://drupal.org/node/1356276
+   [inception-about]:      http://github.com/myplanetdigital/inception
+   [drush-make-distros]:   http://drupal.org/node/1476014
+   [profile-inheritance]:  http://drupal.org/node/1356276
+   [drush-symlink-issue]:  http://drupal.org/node/1300162
