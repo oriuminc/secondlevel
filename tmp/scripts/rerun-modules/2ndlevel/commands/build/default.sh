@@ -25,13 +25,9 @@
 
 set -e
 
-if [ -z "$GIT_COMMIT" ]; then
-  GIT_COMMIT=develop
-fi
-
 # Drush make the site structure
 echo "Running Drush Make..."
-cat ${BUILD_FILE} | sed "s/^\(projects\[${PROJECT}\].*\)develop$/\1${GIT_COMMIT}/" | drush make /dev/stdin ${BUILD_DEST} \
+cat ${BUILD_FILE} | sed "s/^\(projects\[${PROJECT}\].*\)develop$/\1${REVISION}/" | drush make /dev/stdin ${BUILD_DEST} \
   --working-copy \
   --prepare-install \
   --yes
