@@ -10,8 +10,34 @@ with:
   - Memcache
   - APC
 
-This module makes use of a layout derived from that used for [packaging
+This profile makes use of a layout derived from that used for [packaging
 Drupal.org distros][drush-make-distros], with some additional features.
+The rationale behind this is that when we layout our projects according
+to these guidelines, we don't need to document as much, and we will also
+learn how to package our own distribution for drupal.org in the future.
+
+Layout
+------
+
+    +-modules/
+    | +-contrib/  (gitignored - all contrib modules should go here via makefile)
+    | +-custom/   (custom modules for the site)
+    | +-features/ (all feature modules)
+    +-themes/
+    | +-contrib/  (gitignored - any contrib themes should go here via makefile)
+    | +-custom/   (custom theme for the site)
+    +-libraries/  (gitignored - generated via makefile)  
+    +-tmp/        (for things that don't fit in standard install profile structure)
+      +-docs/     (all project-related docs)
+      +-scripts/  (all scripts related to project)
+      +-snippets/ (settings.php snippets)
+      +-tests/    (tests and test data)
+
+*The `tmp/` directory is intended to be removed before deploying to Acquia.*
+
+- If you'd like any code to be appended to `settings.php`, simply add a
+  snippet as `tmp/snippets/mysnippetname.settings.php`. These snippets
+  will be appended in alphabetical order during the build.
 
 To Build
 --------
