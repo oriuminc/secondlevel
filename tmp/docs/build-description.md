@@ -4,8 +4,7 @@
 Summary
 -------
 
-This job will be triggered on every commit to the develop branch on GitHub, rebuilding the site and
-pushing changes to the Acquia repo.
+This job will be triggered on every commit to the develop branch on GitHub, rebuilding the site.
 
 ### Notes
 
@@ -30,6 +29,7 @@ the profile it's fetching, so it will build the specific commit we want, even if
 to be the head of "develop" branch.
 * This rerun script completes the build of the full site into `$WORKSPACE/build` and then appends
   `settings.php` snippets from `tmp/snippets` and appends a few required lines to `.htaccess`.
+* The job will then set this build description to the contents of `tmp/docs/build-description.md`.
 
 <!-- Links -->
    [jenkins-push-docs]: https://wiki.jenkins-ci.org/display/JENKINS/Git+plugin#GitPlugin-Pushnotificationfromrepository
