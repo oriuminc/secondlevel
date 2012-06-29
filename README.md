@@ -10,11 +10,11 @@ with:
   - Memcache
   - APC
 
-This profile makes use of a layout derived from that used for [packaging
-Drupal.org distros][drush-make-distros], with some additional features.
-The rationale behind this is that when we layout our projects according
-to these guidelines, we don't need to document as much, and we will also
-learn how to package our own distribution for drupal.org in the future.
+This profile uses a layout derived from that of [packaging Drupal.org
+distros][drush-make-distros], with some additional features.  The
+rationale behind this is that by laying out our projects according to
+these guidelines, there's less to document, and we also learn how to
+package package distros for drupal.org in the future.
 
 Layout
 ------
@@ -26,14 +26,15 @@ Layout
     +-themes/
     | +-contrib/  (gitignored - any contrib themes should go here via makefile)
     | +-custom/   (custom theme for the site)
-    +-libraries/  (gitignored - generated via makefile)  
+    +-libraries/  (gitignored - generated via makefile)
     +-tmp/        (for things that don't fit in standard install profile structure)
       +-docs/     (all project-related docs)
       +-scripts/  (all scripts related to project)
       +-snippets/ (settings.php snippets)
       +-tests/    (tests and test data)
 
-*The `tmp/` directory is intended to be removed before deploying to Acquia.*
+*The `tmp/` directory is intended to be removed before deploying to our
+cloud host.*
 
 - If you'd like any code to be appended to `settings.php`, simply add a
   snippet as `tmp/snippets/mysnippetname.settings.php`. These snippets
@@ -69,6 +70,12 @@ issue][profile-inheritance].)
     "stubbs" rerun module into rerun git submodule. Posted to a related
 [issue in Drush queue][drush-symlink-issue].
 
+Known Issues
+------------
+
+  - The build script is [known to work on PHP 5.3.8, but not
+    5.3.2][php-drush-bug].
+
 To Do
 -----
 
@@ -84,3 +91,4 @@ To Do
    [drush-make-distros]:   http://drupal.org/node/1476014
    [profile-inheritance]:  http://drupal.org/node/1356276
    [drush-symlink-issue]:  http://drupal.org/node/1300162
+   [php-drush-bug]:        https://gist.github.com/3014293

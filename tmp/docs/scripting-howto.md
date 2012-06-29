@@ -1,7 +1,7 @@
 Scripting
 =========
 
-To help with modularization, we are using the [Rerun][rerun-readme].
+To help with modularization, we are using the [Rerun framework][rerun-readme].
 
 > Rerun is a lightweight tool building framework useful to those
 > implementing management procedure with shell scripts.
@@ -21,10 +21,9 @@ and run:
 
 This will start you down the road to using Rerun.
 
-We keep our custom rerum modules in
-[`tmp/scripts/rerun-modules`][rerun-layout]. You
-can most easily explore them via the CLI by navigating to `tmp/scripts`
-and running
+We keep our custom rerum modules in `tmp/scripts/rerun-modules`, which
+is [structured like so][rerun-layout]. You can most easily explore them
+via the CLI by navigating to `tmp/scripts` and running
 
     $ RERUN_MODULES=rerun-modules ./rerun/rerun
 
