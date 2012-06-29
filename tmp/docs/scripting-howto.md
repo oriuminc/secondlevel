@@ -27,6 +27,15 @@ via the CLI by navigating to `tmp/scripts` and running
 
     $ RERUN_MODULES=rerun-modules ./rerun/rerun
 
+Currently, we're using Rerun as much as possible, and having a single
+bash script, `jenkins-kickstart.sh`, that will act as a container
+script. The intention is that jenkins will only ever be running one
+script, so that a common build job will be able to kickstart job at any
+point on the project at any point in the commit history. (At a future
+time, I should be able to run a build job on a past commit, and the job
+should run to completion without needing to be tailored to scripting
+expectations that were in place at the time the commit was made.)
+
 <!-- Links -->
    [rerun-readme]: https://github.com/dtolabs/rerun#readme
    [rerun-layout]: https://github.com/dtolabs/rerun/blob/master/README.md#layout
