@@ -27,7 +27,7 @@ set -e
 
 # Drush make the site structure
 echo "Running Drush Make..."
-cat ${BUILD_FILE} | sed "s/^\(projects\[${PROJECT}\].*\)develop$/\1${REVISION}/" | drush make /dev/stdin ${BUILD_DEST} \
+cat ${BUILD_FILE} | sed "s/^\(projects\[${PROJECT}\].*\)develop$/\1${REVISION}/" | drush make php://stdin ${BUILD_DEST} \
   --working-copy \
   --prepare-install \
   --yes

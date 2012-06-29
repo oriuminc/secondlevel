@@ -73,8 +73,8 @@ issue][profile-inheritance].)
 Known Issues
 ------------
 
-  - The build script is [known to work on PHP 5.3.8, but not
-    5.3.2][php-drush-bug].
+  - On some systems, Drush Make fails to run on the "file" `/dev/stdin`.
+    We can get around this by running `drush make php://stdin /path/to/build`.
 
 To Do
 -----
