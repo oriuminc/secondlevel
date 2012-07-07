@@ -7,5 +7,6 @@ dependencies[] = dblog
 
 ; 2NDLEVEL
 dependencies[] = apc
+dependencies[] = gelf
 dependencies[] = memcache
 dependencies[] = varnish

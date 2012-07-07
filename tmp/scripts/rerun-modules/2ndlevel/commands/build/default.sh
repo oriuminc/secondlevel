@@ -25,6 +25,10 @@
 
 set -e
 
+# Install composer before running make, if not already installed
+# (Will only work on PHP 5.3+)
+drush dl composer --no
+
 # Drush make the site structure
 echo "Running Drush Make..."
 cd $(dirname `readlink -f $BUILD_FILE`)

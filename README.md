@@ -75,6 +75,9 @@ Known Issues
 
   - On some systems, Drush Make fails to run on the "file" `/dev/stdin`.
     We can get around this by running `drush make php://stdin /path/to/build`.
+  - `php.ini` for PHP CLI needs to be increased or [this Drush
+    issue](http://drupal.org/node/1674240) needs to be resolved.
+    Otherwise, Composer will run out of memory when run under Drush.
 
 To Do
 -----

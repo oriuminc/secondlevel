@@ -24,6 +24,9 @@ projects[diff][version] = 2.0
 projects[features][subdir] = contrib
 projects[features][version] = 1.0-rc3
 
+projects[gelf][subdir] = contrib
+projects[gelf][version] = 1.x-dev
+
 projects[memcache][subdir] = contrib
 projects[memcache][version] = 1.0
 
