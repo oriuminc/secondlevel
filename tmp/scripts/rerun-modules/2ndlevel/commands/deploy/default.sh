@@ -32,7 +32,6 @@ export PATH=$PATH:`readlink -f $WORKSPACE/profile/tmp/scripts/rerun`
 PROJECT=2ndlevel
 
 # Execute site build script
-cd $WORKSPACE/profile
 rerun 2ndlevel:build --build-file $WORKSPACE/profile/build-${PROJECT}.make --destination $WORKSPACE/build
 
 git clone --branch develop $REPO $WORKSPACE/acquia

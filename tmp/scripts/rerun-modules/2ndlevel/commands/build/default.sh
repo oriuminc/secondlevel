@@ -48,4 +48,12 @@ done
 
 chmod u-w ${BUILD_DEST}/sites/default/settings.php
 
+# Add snippet that allows basic auth through settings.php
+tee -a ${BUILD_DEST}/.htaccess << EOH
+
+# Required for user/password authentication on development environments.
+RewriteEngine on
+RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization},L]
+EOH
+
 # Done
