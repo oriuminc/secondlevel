@@ -31,10 +31,15 @@ drush dl composer --no
 
 # Drush make the site structure
 echo "Running Drush Make..."
-cd $(dirname `readlink -f $BUILD_FILE`)
+cd $(dirname `readlink -f ${BUILD_FILE}`)
 cat ${BUILD_FILE} | sed "s/^\(projects\[${PROJECT}\].*\)develop$/\1${REVISION}/" | drush make php://stdin ${BUILD_DEST} \
   --working-copy \
   --prepare-install \
+  --yes
+
+drush site-install ${PROJECT} \
+  --root=${BUILD_DEST} \
+  --db-url=mysql://root:root@localhost/${PROJECT} \
   --yes
 
 chmod u+w ${BUILD_DEST}/sites/default/settings.php
@@ -46,7 +51,7 @@ do
   echo "" | cat - $f | tee -a ${BUILD_DEST}/sites/default/settings.php > /dev/null
 done
 
-tee -a ${BUILD_DEST}/sites/default/settings.php << EOH
+tee -a ${BUILD_DEST}/sites/default/settings.php << 'EOH'
 
 /**
  * Include additional settings files.
@@ -60,7 +65,7 @@ EOH
 chmod u-w ${BUILD_DEST}/sites/default/settings.php
 
 # Add snippet that allows basic auth through settings.php
-tee -a ${BUILD_DEST}/.htaccess << EOH
+tee -a ${BUILD_DEST}/.htaccess << 'EOH'
 
 # Required for user/password authentication on development environments.
 RewriteEngine on
