@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Install, update and uninstall functions for the the 2ndlevel install profile.
+ * Install, update and uninstall functions for the the secondlevel install profile.
  */
 
 /**
@@ -11,7 +11,7 @@
  *
  * @see system_install()
  */
-function 2ndlevel_install() {
+function secondlevel_install() {
   // Enable some standard blocks.
   $default_theme = variable_get('theme_default', 'bartik');
   $values = array(

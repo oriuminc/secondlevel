@@ -10,7 +10,7 @@
  * @See http://drupalcode.org/project/memcache.git/blob/7.x-1.0:/INSTALLATION.txt#l90
  * @See INSTALLATION.txt outdated and redundant: http://drupal.org/node/1452966
  */
-$conf['cache_backends'][] = 'profiles/2ndlevel/modules/contrib/memcache/memcache.inc';
+$conf['cache_backends'][] = 'profiles/secondlevel/modules/contrib/memcache/memcache.inc';
 
 // Set default cache type for Drupal cache bins to be native database caching.
 $conf['cache_default_class'] = 'DrupalDatabaseCache';

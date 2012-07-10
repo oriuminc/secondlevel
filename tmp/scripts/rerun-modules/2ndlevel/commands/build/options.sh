@@ -34,7 +34,7 @@ while [ "$#" -gt 0 ]; do
 done
 
 # If defaultable options variables are unset, set them to their DEFAULT
-[ -z "$PROJECT" ] && PROJECT=2ndlevel
+[ -z "$PROJECT" ] && PROJECT=secondlevel
 [ -z "$TYPE" ] && TYPE=dev
 
 # GIT_COMMIT env var takes precedence (if set non-empty)

@@ -46,6 +46,17 @@ do
   echo "" | cat - $f | tee -a ${BUILD_DEST}/sites/default/settings.php > /dev/null
 done
 
+tee -a ${BUILD_DEST}/sites/default/settings.php << EOH
+
+/**
+ * Include additional settings files.
+ */
+$additional_settings = glob(dirname(__FILE__) . '/settings.*.php');
+foreach ($additional_settings as $filename) {
+  include $filename;
+}
+EOH
+
 chmod u-w ${BUILD_DEST}/sites/default/settings.php
 
 # Add snippet that allows basic auth through settings.php

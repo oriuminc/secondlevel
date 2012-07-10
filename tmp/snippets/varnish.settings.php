@@ -5,7 +5,7 @@
 /**
  * Add Varnish Caching.
  */
-$conf['cache_backends'][] = 'profiles/2ndlevel/modules/contrib/varnish/varnish.cache.inc';
+$conf['cache_backends'][] = 'profiles/secondlevel/modules/contrib/varnish/varnish.cache.inc';
 
 // Drupal 7 does not cache pages when we invoke hooks during bootstrap. This needs
 // to be disabled.

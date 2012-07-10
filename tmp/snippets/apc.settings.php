@@ -5,7 +5,7 @@
 /**
  * Add APC Caching.
  */
-$conf['cache_backends'][] = 'profiles/2ndlevel/modules/contrib/apc/drupal_apc_cache.inc';
+$conf['cache_backends'][] = 'profiles/secondlevel/modules/contrib/apc/drupal_apc_cache.inc';
 
 // Remove slashes to use debug mode.
 // $conf['apc_show_debug'] = TRUE;

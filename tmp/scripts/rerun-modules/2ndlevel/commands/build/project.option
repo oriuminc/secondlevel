@@ -6,6 +6,6 @@ ARGUMENTS=true
 REQUIRED=false
 SHORT=p
 LONG=project
-DEFAULT=2ndlevel
+DEFAULT=secondlevel
 RANGE=
 

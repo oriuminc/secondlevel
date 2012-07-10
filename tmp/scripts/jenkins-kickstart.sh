@@ -17,4 +17,4 @@ export PATH="$PATH:$WORKSPACE/profile/tmp/scripts/rerun"
 export RERUN_MODULES="$WORKSPACE/profile/tmp/scripts/rerun-modules"
 
 # Build site
-rerun 2ndlevel:build -f $WORKSPACE/profile/build-2ndlevel.make -d $WORKSPACE/build
+rerun 2ndlevel:build -f $WORKSPACE/profile/build-secondlevel.make -d $WORKSPACE/build
