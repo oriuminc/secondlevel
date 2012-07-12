@@ -39,6 +39,8 @@ cat ${BUILD_FILE} | sed "s/^\(projects\[${PROJECT}\].*\)develop$/\1${REVISION}/"
 
 drush site-install ${PROJECT} \
   --root=${BUILD_DEST} \
+  --account-pass=admin \
+  --site-name=${PROJECT} \
   --db-url=mysql://root:root@localhost/${PROJECT} \
   --yes
 
