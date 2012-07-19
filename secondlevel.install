@@ -13,8 +13,8 @@
  */
 function secondlevel_install() {
   // Enable some standard blocks.
-  $default_theme = variable_get('theme_default', 'bartik');
-  $default_theme = 'bartik';
+  $default_theme = variable_get('theme_default', 'stark');
+  $default_theme = 'stark';
   $values = array(
     array(
       'module' => 'system',
