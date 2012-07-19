@@ -3,11 +3,12 @@ api = 2
 
 ; ; TEMPLATE
 ; projects[][subdir] = contrib
-; projects[][version] = 
+; projects[][version] =
 ; ; This is the issue title: http://drupal.org/node/xxxxxxx#comment-xxxxxxx
-; projects[][patch][] = 
+; projects[][patch][] =
 
 ; MODULES
+; Ascending Alphabetical order from the module name
 
 projects[apc][subdir] = contrib
 projects[apc][version] = 1.0-beta4

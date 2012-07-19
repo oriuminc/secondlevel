@@ -35,6 +35,7 @@ cd $(dirname `readlink -f ${BUILD_FILE}`)
 cat ${BUILD_FILE} | sed "s/^\(projects\[${PROJECT}\].*\)develop$/\1${REVISION}/" | drush make php://stdin ${BUILD_DEST} \
   --working-copy \
   --prepare-install \
+  --no-gitinfofile \
   --yes
 
 drush site-install ${PROJECT} \
