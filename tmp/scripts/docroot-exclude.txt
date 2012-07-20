@@ -1,3 +1,0 @@
-# These path patterns will be excluded from the acquia repo docroot
-# during site build
-/profiles/*/tmp
