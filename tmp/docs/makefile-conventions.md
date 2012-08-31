@@ -6,6 +6,11 @@ that teams have adopted. Everyone is encouraged to make changes and
 engage in GitHub issue queue discussion on anything that isn't fully
 clear.
 
+Each **FTW** example is not necessarily the absolute best way to write
+a given entry, but is the best approach for the specific point in
+question. This is to help reduce noise in this doc and to more easily
+exemplify the individual best-practices.
+
 Keep it concise
 ---------------
 
