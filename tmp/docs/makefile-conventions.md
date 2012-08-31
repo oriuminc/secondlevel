@@ -126,7 +126,7 @@ Be reproducible
 
             ; FTW
             libraries[jquery.cycle][download][type] = file
-            ; v2.9999.5
+            ; v2.9999.5 (since not obvious from commit hash)
             libraries[jquery.cycle][download][url] = https://raw.github.com/malsup/cycle/b1dc72bc/jquery.cycle.all.js
 
   - Git repos
@@ -138,8 +138,18 @@ Be reproducible
             projects[views][download][branch] = 7.x-3.x
 
 - When referencing others' projects on GitHub, consider forking the project to
-the myplanetdigital github account, and pointing the makefile to that repo.
+a github account in your possession, and pointing the makefile to that repo.
 This is especially important for repos who's permanence is less guaranteed.
+
+        ; WTF
+        libraries[jquery.cycle][download][type] = file
+        ; v2.9999.5 (since not obvious from commit hash)
+        libraries[jquery.cycle][download][url] = https://raw.github.com/malsup/cycle/b1dc72bc/jquery.cycle.all.js
+
+        ; FTW
+        libraries[jquery.cycle][download][type] = file
+        ; v2.9999.5 (since not obvious from commit hash)
+        libraries[jquery.cycle][download][url] = https://raw.github.com/myplanetdigital/cycle/b1dc72bc/jquery.cycle.all.js
 
 - Reproducibility is the utmost important tenet. In other words
   everything in the Makefile should be pinned so that the site built
@@ -151,14 +161,22 @@ commit is used.
 This means that we only want to diverge from contrib code with
 specifically needed patches. For example, while we might be tempted to use a mid-release commit hash to make a
 specific patch from the issue queues apply cleanly, we would instead
-apply that patch to an actual tagged project release. If it does not
+apply that patch to an actual **tagged project release**. If it does not
 apply cleanly, we would reroll that patch against the tagged release,
 and re-post it to the queues. [DOC THIS PROCESS]
 
         ; WTF
         projects[views][type] = modules
         projects[views][download][type] = git
-        projects[views][download][url] = git
-        projects[views][download][revision] = git
+        projects[views][download][url] = http://git.drupal.org/project/views.git
+        projects[views][download][revision] = 84890125a03a8177
+        projects[views][patch][] = http://drupal.org/files/views-show-langauge-neutral-1723810-2.patch
 
         ; FTW
+        projects[views][version] = 3.5
+        projects[views][patch][] = http://drupal.org/files/views-show-langauge-neutral-1723810-2.patch
+
+        ; FTW
+        projects[views][version] = 3.5
+        projects[views][patch][] = http://drupal.org/files/views-show-langauge-neutral-1723810-7_reroll-3.5.patch
+        
