@@ -11,8 +11,45 @@ a given entry, but is the best approach for the specific point in
 question. This is to help reduce noise in this doc and to more easily
 exemplify the individual best-practices.
 
-Keep it concise
----------------
+Be organized
+------------
+
+- Keep categories simple -- alphabetical sections for modules, themes &
+  libraries. Getting into fine-grained module categorization like "User
+Interface" or "Theming" will simply add overhead when team members
+classify them differently, or modules legitimately straddle categories.
+
+        ; WTF
+        ; User Interface
+        projects[context_admin][version] = 1.1
+        projects[jquerymobile][version] = 2.0-beta1
+        
+        ; Admin Tools
+        projects[admin_menu][version] = 3.0-rc3
+
+        ; Theming
+        projects[mobile_jquery][version] = 2.0-beta1
+        projects[sweaver][version] = 1.3
+        libraries[lessphp][download][type] = file
+        libraries[lessphp][download][url] = https://github.com/leafo/lessphp/tarball/v0.3.4-2
+
+
+        ; FTW
+        ; MODULES
+        projects[admin_menu][version] = 3.0-rc3
+        projects[context_admin][version] = 1.1
+        projects[jquerymobile][version] = 2.0-beta1
+        projects[sweaver][version] = 1.3
+
+        ; THEMES
+        projects[mobile_jquery][version] = 2.0-beta1
+
+        ; LIBRARIES
+        libraries[lessphp][download][type] = file
+        libraries[lessphp][download][url] = https://github.com/leafo/lessphp/tarball/v0.3.4-2
+
+Be concise
+----------
 
 - Quotes on array values are just extra noise in the makefile, so leave
   them out.
@@ -112,6 +149,11 @@ that it's subsequent to 3.5 rather than 3.4.
 Be reproducible
 ---------------
 
+- Reproducibility is the utmost important tenet. In other words
+  everything in the Makefile should be pinned so that the site built
+today and the site built next year will be the same, so long as the same
+commit is used.
+
 - Always pin makefile entries to be unchanging, including:
 
   - Drupal.org projects
@@ -131,7 +173,6 @@ Be reproducible
 
             ; FTW
             libraries[jquery.cycle][download][type] = file
-            ; v2.9999.5 (since not obvious from commit hash)
             libraries[jquery.cycle][download][url] = https://raw.github.com/malsup/cycle/b1dc72bc/jquery.cycle.all.js
 
   - Git repos
@@ -148,18 +189,14 @@ This is especially important for repos who's permanence is less guaranteed.
 
         ; WTF
         libraries[jquery.cycle][download][type] = file
-        ; v2.9999.5 (since not obvious from commit hash)
         libraries[jquery.cycle][download][url] = https://raw.github.com/malsup/cycle/b1dc72bc/jquery.cycle.all.js
 
         ; FTW
         libraries[jquery.cycle][download][type] = file
-        ; v2.9999.5 (since not obvious from commit hash)
         libraries[jquery.cycle][download][url] = https://raw.github.com/myplanetdigital/cycle/b1dc72bc/jquery.cycle.all.js
 
-- Reproducibility is the utmost important tenet. In other words
-  everything in the Makefile should be pinned so that the site built
-today and the site built next year will be the same, so long as the same
-commit is used.
+Be minimally divergent
+----------------------
 
 - In close second (after reproducibility), is the idea that code used on
   any site be as conservatively divergent from contrib code as possible.
@@ -184,4 +221,3 @@ and re-post it to the queues. [DOC THIS PROCESS]
         ; FTW
         projects[views][version] = 3.5
         projects[views][patch][] = http://drupal.org/files/views-show-langauge-neutral-1723810-7_reroll-3.5.patch
-        
