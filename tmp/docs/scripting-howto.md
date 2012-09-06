@@ -36,6 +36,15 @@ time, I should be able to run a build job on a past commit, and the job
 should run to completion without needing to be tailored to scripting
 expectations that were in place at the time the commit was made.)
 
+Internationalization (i18n)
+---------------------------
+
+Some clients may need scripts to be internationalized. This article in
+the Linux Journal might prove useful:
+
+[Internationalizing Those Bash Scripts][i18n-bash]
+
 <!-- Links -->
    [rerun-readme]: https://github.com/dtolabs/rerun#readme
    [rerun-layout]: https://github.com/dtolabs/rerun/blob/master/README.md#layout
+   [i18n-bash]:    http://www.linuxjournal.com/content/internationalizing-those-bash-scripts
