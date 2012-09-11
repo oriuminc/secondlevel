@@ -1,11 +1,20 @@
+;
+; @file
+; Define the secondlevel installation profile.
+;
+
 name = Second Level
 description = High-performance base install profile for Inception CI stack.
 version = 1.x-dev
 core = 7.x
+
+; CORE MODULES
+
 dependencies[] = block
 dependencies[] = dblog
 
-; SECOND LEVEL
+; CONTRIBUTED MODULES
+
 dependencies[] = apc
 dependencies[] = gelf
 dependencies[] = memcache

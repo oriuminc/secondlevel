@@ -1,3 +1,8 @@
+;
+; @file
+; Prepare a basic Drupal core.
+;
+
 core = 7.x
 api = 2
 
