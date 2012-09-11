@@ -1,3 +1,8 @@
+;
+; @file
+; Bring together any contributed parts of this installation profile.
+;
+
 core = 7.x
 api = 2
 
