@@ -13,5 +13,5 @@ includes[] = drupal-org-core.make
 ; Downloads this installation profile into the new site.
 projects[secondlevel][type] = profile
 projects[secondlevel][download][type] = git
-projects[secondlevel][download][url] = https://github.com/myplanetdigital/2ndleveldeep.git
+projects[secondlevel][download][url] = https://github.com/myplanetdigital/secondlevel.git
 projects[secondlevel][download][revision] = develop
